@@ -1,0 +1,67 @@
+#menu-icon 
+  display: block
+  
+
+
+.navlist
+  width: 370px
+  height: 100vh
+  z-index: 1000
+  background: #252839
+  opacity: 0.9
+  
+  button
+    margin: 10px
+    font-size: 2em
+    color: #fff
+    background: #00ade1
+  
+  .open
+    top: 100%
+
+  ul
+    
+    position: relative
+    display: flex
+    flex-direction: column
+    gap: 10px
+  
+    li
+      position: relative
+      list-style: none
+      display: flex
+      align-items: center
+      
+      i 
+        margin: 10px
+        font-size: 2em
+        color: #fff
+  
+      a
+        font-weight: 600
+        position: relative
+        font-size: 2em
+        text-decoration: none
+        line-height: 1em
+        letter-spacing: 2px
+        text-transform: uppercase
+        color: transparent
+        -webkit-text-stroke: 1px #e7e7e7
+  
+        &::before
+          content: attr(data-text)
+          position: absolute
+          color: #00ade1
+          width: 0
+          overflow: hidden
+          transition: 1.5s
+          border-right: 8px solid #00ade1
+          -webkit-text-stroke: 1px #00ade1
+  
+        &:hover::before
+          width: 100%
+          filter: drop-shadow(0 0 25px #00ade1)
+          
+        &:active::before
+          width: 100%
+          filter: drop-shadow(0 0 25px #00ade1)

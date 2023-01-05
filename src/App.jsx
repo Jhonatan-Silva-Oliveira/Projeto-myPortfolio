@@ -1,10 +1,10 @@
-import Homepage from "./components/homepage"
+import Rotas from './Rotas';
 
 function App() {
 
   return (
     <div id="portfolio">
-      <Homepage />
+      <Rotas />
     </div>
   )
 }

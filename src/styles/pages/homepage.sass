@@ -1,0 +1,95 @@
+.homepage
+  display: flex
+
+  .conteudo-principal
+    width: 100%
+    height: 100vh
+    position: relative
+    display: flex
+    justify-content: center
+    align-items: center
+    background: #252839
+    
+    .espaco-foto
+      position: relative
+      width: 300px
+      height: 300px
+      border-radius: 50%
+      overflow: hidden
+      
+      img
+        width: 80%
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+    
+    .text-homepage
+      display: flex
+      flex-direction: column
+      color: #037ef1
+      transition: 1s
+      
+      h2
+        font-size: 2em
+        
+      h1
+        font-size: 3em
+        
+      h3
+        font-size: 1.6em
+        
+      .span-text
+        color: #0e3742
+        text-transform: uppercase
+        width: 100%
+        text-align: center
+        -webkit-box-reflect: below 1px linear-gradient(transparent,#0004)
+        line-height: 0.70em
+        outline: none
+        animation: animate-text 2s linear infinite alternate
+        
+      .conter-bottom
+        
+        display: flex
+        align-items: center
+        justify-content: space-around
+        margin-top: 30px
+        
+        button
+          padding: 15px 30px
+          text-transform: uppercase
+          border-radius: 40px
+          font-size: 1em
+          font-weight: bold
+          border: none
+          transition: 1.5s
+          cursor: pointer
+          
+        .btn-curriculo
+          color: #0c3864
+          background: #12b3eb
+          
+          &:hover
+            filter: drop-shadow(0 0 25px #00ade1)
+            background-image: linear-gradient(to top, #0360eb, #0b58a5, #2b76ac, #1c88bd, #12b3eb)
+            color: #fff
+            
+        .btn-portfolio
+          color: #750602
+          background: #f14a4a
+          
+          &:hover
+            filter: drop-shadow(0 0 25px #e10000)
+            background-image: linear-gradient(to top, #eb0303, #a50b0b, #ac2b2b, #bd1c1c, #eb1212)
+            color: #fff
+
+@keyframes animate-text
+  0%,18%,20%,50.1%,60%,65.1%,80%,90.1%,92%
+    color: #0e3742
+    text-shadow: none
+  
+  18.1%,20.1%,30%,50%,60.1%,65%,80.1%,90%,92.1%,100%
+    color: #fff
+    text-shadow: 0 0 10px #03bcf4, 0 0 20px #03bcf4, 0 0 40px #03bcf4, 0 0 80px #03bcf4, 0 0 160px #03bcf4
+
