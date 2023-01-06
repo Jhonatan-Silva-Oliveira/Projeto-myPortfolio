@@ -15,12 +15,13 @@ const Homepage = () => {
           <h1>Eu sou <span className="span-text">Jhonatan Silva</span></h1>
           <h3>Eu sou um <span className="span-text">Desenvolvedor</span> Front-End</h3>
           
-          <div className="conter-bottom">
-            <button className="btn-curriculo">Currículo</button>
-            <button className="btn-portfolio">Portfolio</button>
-          </div>
         </div>
-        
+        <div className="container-btn-bg">
+          <button className="btn-curriculo">Currículo</button>
+          <button className="btn-portfolio">Portfolio</button>
+          
+          <div class="bg-absolute">background 1</div>
+        </div>
         
       </div>
     </div>

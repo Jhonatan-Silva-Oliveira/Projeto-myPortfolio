@@ -1,5 +1,5 @@
 .homepage
-  display: flex
+  position: relative
 
   .conteudo-principal
     width: 100%
@@ -8,7 +8,6 @@
     display: flex
     justify-content: center
     align-items: center
-    background: #252839
     
     .espaco-foto
       position: relative
@@ -27,7 +26,7 @@
     .text-homepage
       display: flex
       flex-direction: column
-      color: #037ef1
+      color: #fff
       transition: 1s
       
       h2
@@ -49,40 +48,60 @@
         outline: none
         animation: animate-text 2s linear infinite alternate
         
-      .conter-bottom
+    .container-btn-bg
+      position: absolute
+      display: flex
+      align-items: center
+      justify-content: center
+      gap: 100px
+      
+      .bg-absolute
+        background: #2e2e2e
+        background-size: cover
+        width: 100%
+        height: 100vh
+        transition: .6s
+        position: fixed
+        z-index: -1000
+      
+      button
+        padding: 15px 30px
+        text-transform: uppercase
+        border-radius: 40px
+        font-size: 1em
+        font-weight: bold
+        border: none
+        transition: 1.5s
+        cursor: pointer
         
-        display: flex
-        align-items: center
-        justify-content: space-around
-        margin-top: 30px
+      .btn-curriculo
+        color: #0c3864
+        background: #12b3eb
+        position: absolute
+        top: 100px
         
-        button
-          padding: 15px 30px
-          text-transform: uppercase
-          border-radius: 40px
-          font-size: 1em
-          font-weight: bold
-          border: none
-          transition: 1.5s
-          cursor: pointer
+        &:hover
+          filter: drop-shadow(0 0 25px #00ade1)
+          background-image: linear-gradient(to top, #0360eb, #0b58a5, #2b76ac, #1c88bd, #12b3eb)
+          color: #fff
           
-        .btn-curriculo
-          color: #0c3864
-          background: #12b3eb
+        &:hover ~ .bg-absolute
+          background: #0c3864
           
-          &:hover
-            filter: drop-shadow(0 0 25px #00ade1)
-            background-image: linear-gradient(to top, #0360eb, #0b58a5, #2b76ac, #1c88bd, #12b3eb)
-            color: #fff
-            
-        .btn-portfolio
-          color: #750602
-          background: #f14a4a
+      .btn-portfolio
+        color: #750602
+        background: #f14a4a
+        position: absolute
+        top: 100px
+        left: 200px
+        
+        &:hover
+          filter: drop-shadow(0 0 25px #f13a3a)
+          background-image: linear-gradient(to top, #eb0303, #a50b0b, #ac2b2b, #bd1c1c, #eb1212)
+          color: #fff
           
-          &:hover
-            filter: drop-shadow(0 0 25px #e10000)
-            background-image: linear-gradient(to top, #eb0303, #a50b0b, #ac2b2b, #bd1c1c, #eb1212)
-            color: #fff
+        &:hover + .bg-absolute
+          background: #550202
 
 @keyframes animate-text
   0%,18%,20%,50.1%,60%,65.1%,80%,90.1%,92%
